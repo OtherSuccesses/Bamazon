@@ -11,8 +11,8 @@ var custCost= 0;
 var connection = mysql.createConnection({
 	host: 'localhost',
 	port:3306,
-	user: "root"
-	password: Yeroma1bru,
+	user: "root",
+	password: "Yeroma1bru",
 	database: "bamazon"
 });
 
@@ -72,8 +72,8 @@ function start(){
 				console.log("That didn't match anything in our stocks...")
 				continueShopping();
 			}
-		}
-	})
+		});
+	});
 }
 
 function inventoryCheck(){
