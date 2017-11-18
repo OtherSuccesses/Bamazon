@@ -50,7 +50,7 @@ function start(){
 		])
 		.then(function(response){
 			item = function(){
-				for(var i; i < res.length; i++){
+				for(var i= 0; i < res.length; i++){
 					if (res[i].id === parseInt(response.id)){
 						return res[i];
 					}
@@ -61,7 +61,7 @@ function start(){
 				stockRemaining = item().quantity - response.amount;
 				itemCost = response.quantity * item().price;
 				custCost += itemCost;
-				sales = item().sales += itemcost;
+				sales = item().sales += itemCost;
 				inventoryCheck();
 			}
 			else if (response.amount > item().quantity){
