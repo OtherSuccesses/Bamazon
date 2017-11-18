@@ -57,7 +57,7 @@ function start(){
 				}
 				return "";
 			}
-			if (response.quantity<= item().quantity){
+			if (response.amount<= item().quantity){
 				stockRemaining = item().quantity - response.amount;
 				itemCost = response.quantity * item().price;
 				custCost += itemCost;
